@@ -11,8 +11,7 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import os
-from dotenv import load_dotenv
-load_dotenv()
+
 # Optional: add contact me email functionality (Day 60
 # import smtplib
 
@@ -267,7 +266,7 @@ def delete_post(post_id):
     db.session.commit()
     return redirect(url_for('get_all_posts'))
 
-
+g
 @app.route("/about")
 def about():
     return render_template("about.html", current_user=current_user)
